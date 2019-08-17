@@ -138,7 +138,7 @@ footer img   {
   display: inline-block;
   width: 33%;
   padding: 20px 30px;
-
+  vertical-align: top;/* 使對齊不因增加行數而跑掉*/
 }
 .feature-box img  {
 
