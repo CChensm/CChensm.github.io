@@ -39,7 +39,10 @@
 
             </div>
         </div>
+        <section id="content">   
+            <button onclick="getData('content.html');">内容</button>
 
+        </section>
         <!-- features section -->
         <div class="site-section">
             <div class="site-section-inside">
@@ -84,5 +87,16 @@
         <span>Shu's Website </span>
     </footer>
 
+    <script>
+        function getData(pagename){
+            var req = new XMLHttpRequest();
+            req.open("get","http://cchensm.github.io/" + pagename);
+            req.onload = function(){
+                var content = document.getElementById("content");
+                content.innerHTML = this.responseText;
+            };
+            req.send();
+        }
+    </script>
 </body>
 </html>
