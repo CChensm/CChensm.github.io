@@ -39,9 +39,15 @@
 
             </div>
         </div>
-        <section id="content">   
-            <button onclick="getData('content.html');">内容</button>
-
+        <section>   
+            <ul>
+                <li><button onclick="getData('content.html');">content</button></li>
+                <li><button onclick="getData('music.html');">music</button></li>
+            </ul>
+            
+            <div id="content">
+                <p>内容</p>
+            </div>
         </section>
         <!-- features section -->
         <div class="site-section">
@@ -90,7 +96,7 @@
     <script>
         function getData(pagename){
             var req = new XMLHttpRequest();
-            req.open("get","http://cchensm.github.io/" + pagename);
+            req.open("get","https://cchensm.github.io/" + pagename);
             req.onload = function(){
                 var content = document.getElementById("content");
                 content.innerHTML = this.responseText;
