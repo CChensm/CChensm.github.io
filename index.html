@@ -1,108 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>shu's Website</title>
+    <title>Shu's Website</title>
 
     <!-- attach our stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- for responsive navbar -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <header>
-
-        <!-- our main logo -->
-        <a id="logo" href="index.html">
-            <img src="img/shu.jpeg" alt="Logo">
-            <span>shuting</span>
+    <!-- responsive navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <a class="navbar-brand" href="#">
+            <img src="img/shu.jpeg" width="50" height="50" class="d-inline-block align-center rounded" alt="logo">
+          Shu
         </a>
-
-        <!-- main navigation links -->
-        <nav>
-            <ul>
-                <li><a href="#">首頁</a></li>
-                <li><a href="#about">關於我</a></li>
-                
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">首頁 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">關於我</a>
+                </li>
             </ul>
-        </nav>
+        </div>
+    </nav>
 
-    </header>
-
-    <!-- the content -->
+    <!-- main content -->
     <main>
-
         <!-- hero content -->
-        <div class="hero">
+        <div class="hero text-center row  align-items-center">
+            <!-- row + align-item-center + col = Vertical alignment -->
             <!-- content for the hero -->
-            <div class="hero-content">
-                <h1 class="hero-title">WELCOME</h1>
-                <p>歡迎來到舒婷的個人網頁</p>
-
+            <div class="text-white col">
+                <h1>WELCOME</h1>
+                <p>歡迎來到Shu的個人網頁</p>
             </div>
         </div>
-        <section>   
-            <ul>
-                <li><button onclick="getData('content.html');">content</button></li>
-                <li><button onclick="getData('music.html');">music</button></li>
-            </ul>
-            
-            <div id="content">
-                <p>内容</p>
-            </div>
-        </section>
+        
         <!-- features section -->
-        <div class="site-section">
-            <div class="site-section-inside">
-
-                <div class="section-header">
+        <div class="text-center">
+            <div class="m-4">
                 <h2 id="about">關於我</h2>
+            </div>
+            <div class="card-deck  m-4 text-center">
+                <div class="card">
+                    <img src="img/like.png" class="card-img-top  align-self-center w-50 m-4" alt="學經歷">
+                    <div class="card-body">
+                        <h5 class="card-title">學經歷</h5>
+                        <p class="card-text">輔仁大學</p>
+                        <p class="card-text">圖書資訊學系</p>
+                    </div>
                 </div>
-
-                <div class="feature-box">
-                <img src="img/like.png" alt="學經歷">
-                <h5>學經歷</h5>
-                <p>輔仁大學</p>
-                <p>圖書資訊學系</p>
+                <div class="card">
+                    <img src="img/faces.png" class="card-img-top align-self-center w-50 m-4" alt="社團參與">
+                    <div class="card-body">
+                        <h5 class="card-title">社團參與</h5>
+                        <p class="card-text">輔大圖資學會</p>
+                    </div>
                 </div>
-
-                <div class="feature-box">
-                <img src="img/faces.png" alt="社團參與">
-                <h5>社團參與</h5>
-                <p>輔大圖資學會</p>
-                <p><a href="https://sirla-fjulis.github.io/"></a>SIRLA</p>
+                <div class="card">
+                    <img src="img/heart.png" class="card-img-top  align-self-center w-50 m-4" alt="喜好興趣">
+                    <div class="card-body">
+                        <h5 class="card-title">喜好興趣</h5>
+                        <p class="card-text">吃東西</p>
+                        <p class="card-text">吃東西</p>
+                        <p class="card-text">吃東西</p>
+                    </div>
                 </div>
-
-                <div class="feature-box">
-                <img src="img/heart.png" alt="興趣愛好">
-                <h5>喜好興趣</h5>
-                <p>吃東西</p>
-                <p>看電視</p>
-                <p>聽音樂</p>
-                
-                </div>
-
             </div>
         </div>
-
-       
     </main>
-
-    <!-- the footer -->
-    <footer>
-        <img src="img/shu.jpeg" alt="Footer Logo">
-        <a href="mailto:405040178@gapp.fju.edu.tw">405040178@gapp.fju.edu.tw</a><br>
-        <span>Shu's Website </span>
+    <!-- footer -->
+    <footer class="row bg-dark text-secondary">
+        <div class="m-auto text-center">
+            <img src="img/shu.jpeg" width="50" height="50" class="d-inline-block align-center rounded mt-4" alt="Footer Logo">
+            <p><a href="mailto:405040178@gapp.fju.edu.tw">405040178@gapp.fju.edu.tw</a><br><span>Shu's Website</span></p>
+        </div>
     </footer>
-
-    <script>
-        function getData(pagename){
-            var req = new XMLHttpRequest();
-            req.open("get","https://cchensm.github.io/" + pagename);
-            req.onload = function(){
-                var content = document.getElementById("content");
-                content.innerHTML = this.responseText;
-            };
-            req.send();
-        }
-    </script>
 </body>
 </html>
